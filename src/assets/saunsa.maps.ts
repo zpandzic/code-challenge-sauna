@@ -100,13 +100,35 @@ x-B-+   C
     expectedError: ValidationError.MISSING_END_CHARACTER,
   },
   {
-    description: "Multiple starts",
+    description: "Multiple starts: example 1",
     map: `
- @--A-@-+
-        |
-x-B-+   C
-    |   |
-    +---+
+   @--A-@-+
+          |
+  x-B-+   C
+      |   |
+      +---+
+`,
+    expectedError: ValidationError.MULTIPLE_START_CHARACTERS,
+  },
+  {
+    description: "Multiple starts: example 2",
+    map: `
+   @--A---+
+          |
+          C
+          x
+      @-B-+
+`,
+    expectedError: ValidationError.MULTIPLE_START_CHARACTERS,
+  },
+  {
+    description: "Multiple starts: example 3",
+    map: `
+   @--A--x
+
+  x-B-+
+      |
+      @
 `,
     expectedError: ValidationError.MULTIPLE_START_CHARACTERS,
   },

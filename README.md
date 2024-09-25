@@ -88,10 +88,9 @@ The program processes this grid, starting from `@` and moving through the nodes,
 
 1.  **Run Tests:**
     Execute the tests using npm:
-
-        ```sh
-        npm run test
-        ```
+   ```sh
+   npm run test
+   ```
 
 **Note:** The tests from the original task can be found in `src/assets/saunsa.maps.ts`.
 

@@ -1,8 +1,7 @@
 import { PathFinder } from "./core/PathFinder";
+import { readFile } from "./utils/file-reader";
 
-const map = `
-    @-A--B-x
-`;
+const map = readFile("src/assets/maps/valid/basic_example.txt");
 
 const pathFinder = new PathFinder(map);
 pathFinder.traverse();
